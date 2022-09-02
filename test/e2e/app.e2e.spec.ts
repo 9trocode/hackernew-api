@@ -21,4 +21,28 @@ describe('AppController (e2e)', () => {
       .expect(200)
       .expect('Hello World!');
   });
+
+
+  it('/ (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/hackernews/commonWords?stories=25')
+      .expect(200)
+      .expect({
+            code: 200,
+            status: true,
+            data: [
+              { key: 'for', value: 5 },
+              { key: 'to', value: 5 },
+              { key: 'a', value: 4 },
+              { key: 'hn', value: 3 },
+              { key: 'and', value: 3 },
+              { key: 'with', value: 3 },
+              { key: 'in', value: 3 },
+              { key: 'm', value: 3 },
+              { key: 'show', value: 2 },
+              { key: 'an', value: 2 }
+            ]
+          }
+      );
+  });
 });

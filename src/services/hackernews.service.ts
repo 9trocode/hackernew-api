@@ -36,7 +36,7 @@ export class HackernewsService {
 
         }catch (error){
             return {
-                code: 200,
+                code: 400,
                 status: true,
                 err: error.message
             }
@@ -66,7 +66,7 @@ export class HackernewsService {
 
       }catch (error){
           return {
-              code: 200,
+              code: 400,
               status: true,
               err: error.message
           }
@@ -104,7 +104,7 @@ export class HackernewsService {
 
         }catch (error){
             return {
-                code: 200,
+                code: 400,
                 status: true,
                 err: error.message
             }

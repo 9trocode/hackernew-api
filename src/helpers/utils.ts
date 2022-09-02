@@ -10,7 +10,7 @@ export const getAxiosInstance = () => {
 
 
 export interface ServiceResponse {
-    code: 200
+    code: number
     status: boolean
     data?: any
     err?: string
